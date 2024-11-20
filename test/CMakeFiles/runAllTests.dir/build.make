@@ -93,6 +93,8 @@ runAllTests_EXTERNAL_OBJECTS =
 runAllTests: CMakeFiles/runAllTests.dir/test.cpp.o
 runAllTests: CMakeFiles/runAllTests.dir/build.make
 runAllTests: lib/libgtest.a
+runAllTests: lib/libgtest_main.a
+runAllTests: lib/libgtest.a
 runAllTests: CMakeFiles/runAllTests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/csmajs/jmont229/cs170/CS170-Project2/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable runAllTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runAllTests.dir/link.txt --verbose=$(VERBOSE)

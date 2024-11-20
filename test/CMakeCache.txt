@@ -199,7 +199,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=HeuristicSearch
+CMAKE_PROJECT_NAME:STATIC=MachineLearning
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.15.2
@@ -294,6 +294,15 @@ HeuristicSearch_SOURCE_DIR:STATIC=/home/csmajs/jmont229/cs170/CS170-Project2/tes
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
+
+//Value Computed by CMake
+MachineLearning_BINARY_DIR:STATIC=/home/csmajs/jmont229/cs170/CS170-Project2/test
+
+//Value Computed by CMake
+MachineLearning_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+MachineLearning_SOURCE_DIR:STATIC=/home/csmajs/jmont229/cs170/CS170-Project2/test
 
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=/home/csmajs/jmont229/cs170/CS170-Project2/test
