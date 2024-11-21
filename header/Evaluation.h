@@ -10,14 +10,11 @@ struct FeaturesAndAccuracy
     std::set<int> _features;
     double _accuracy;
 };
-struct featureNode
-{
-    std::set<int>_features;
-};
 
 //adjust functions in part 2 to do k fold validation and to deal with classifiers
-double GetAccurracy(featureNode); //adjust in part 2 to do k fold validation
-FeaturesAndAccuracy Forward_Selection(const std::set<int>& givenFeatures, int numberOfFeatures, std::vector<FeaturesAndAccuracy> trace);
-FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, int numberOfFeatures, std::vector<FeaturesAndAccuracy> trace);
+double GetAccurracy(FeaturesAndAccuracy); //adjust in part 2 to do k fold validation
+FeaturesAndAccuracy Forward_Selection(const std::set<int>& givenFeatures, std::vector<FeaturesAndAccuracy> trace);
+FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, std::vector<FeaturesAndAccuracy> trace);
+FeaturesAndAccuracy BE_Expand( FeaturesAndAccuracy, std::vector<FeaturesAndAccuracy>& trace);
 
 #endif
