@@ -53,6 +53,16 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
 
 }
 
+void printForwardTrace(vector<FeaturesAndAccuracy>& trace) {
+    for (const FeaturesAndAccuracy& entry : trace) {
+        cout << "Using feature(s) {"; 
+        for (int feature : entry._features) {
+            cout << feature << " ";
+        }
+        cout << "} accuracy is " << entry._accuracy << "%" << endl;
+    }
+}
+
 FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, int numberOfFeatures, std::vector<FeaturesAndAccuracy> trace)
 {
 
