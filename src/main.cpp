@@ -2,6 +2,6 @@
 
 int main()
 {
-    srand(40);
+    //srand(40);
     return 0;
 }

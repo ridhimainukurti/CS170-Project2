@@ -303,8 +303,38 @@ CMakeFiles/runAllTests.dir/test.cpp.o: test.cpp \
   googletest/googletest/include/gtest/gtest-test-part.h \
   googletest/googletest/include/gtest/gtest-typed-test.h \
   googletest/googletest/include/gtest/gtest_pred_impl.h \
-  googletest/googletest/include/gtest/gtest_prod.h
+  googletest/googletest/include/gtest/gtest_prod.h \
+  /home/csmajs/jmont229/cs170/CS170-Project2/header/Evaluation.h \
+  /home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp \
+  /home/csmajs/jmont229/cs170/CS170-Project2/header/Evaluation.h \
+  /usr/include/c++/8/cmath \
+  /usr/include/math.h \
+  /usr/include/bits/math-vector.h \
+  /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/flt-eval-method.h \
+  /usr/include/bits/fp-logb.h \
+  /usr/include/bits/fp-fast.h \
+  /usr/include/bits/mathcalls-helper-functions.h \
+  /usr/include/bits/mathcalls.h \
+  /usr/include/bits/mathcalls-narrow.h \
+  /usr/include/bits/iscanonical.h
 
+
+/usr/include/bits/iscanonical.h:
+
+/usr/include/bits/mathcalls-narrow.h:
+
+/usr/include/bits/mathcalls.h:
+
+/usr/include/bits/flt-eval-method.h:
+
+/usr/include/bits/math-vector.h:
+
+/usr/include/math.h:
+
+/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp:
+
+/home/csmajs/jmont229/cs170/CS170-Project2/header/Evaluation.h:
 
 googletest/googletest/include/gtest/gtest_prod.h:
 
@@ -330,6 +360,8 @@ googletest/googletest/include/gtest/gtest-param-test.h:
 
 /usr/include/bits/types/__sigval_t.h:
 
+/usr/include/bits/fp-logb.h:
+
 /usr/include/bits/types/siginfo_t.h:
 
 /usr/include/c++/8/x86_64-redhat-linux/bits/cxxabi_tweaks.h:
@@ -345,6 +377,8 @@ googletest/googletest/include/gtest/gtest-param-test.h:
 /usr/include/c++/8/bits/parse_numbers.h:
 
 /usr/include/regex.h:
+
+/usr/include/bits/fp-fast.h:
 
 /usr/include/bits/getopt_core.h:
 
@@ -367,6 +401,8 @@ googletest/googletest/include/gtest/gtest-param-test.h:
 /usr/include/c++/8/mutex:
 
 /usr/include/asm-generic/types.h:
+
+/usr/include/bits/mathcalls-helper-functions.h:
 
 /usr/include/asm/types.h:
 
@@ -545,6 +581,8 @@ googletest/googletest/include/gtest/gtest.h:
 /usr/include/sys/cdefs.h:
 
 /usr/include/bits/types/__fpos_t.h:
+
+/usr/include/c++/8/cmath:
 
 googletest/googletest/include/gtest/gtest-typed-test.h:
 
@@ -743,6 +781,8 @@ googletest/googletest/include/gtest/internal/gtest-internal.h:
 /usr/include/errno.h:
 
 /usr/include/endian.h:
+
+/usr/include/bits/libm-simd-decl-stubs.h:
 
 /usr/include/c++/8/bits/stl_construct.h:
 

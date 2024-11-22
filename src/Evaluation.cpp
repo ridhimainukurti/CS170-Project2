@@ -1,11 +1,12 @@
 #include "../header/Evaluation.h"
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-double GetAccurracy(set<int>) //adjust in part 2 to do k fold validation
+double GetAccurracy(FeaturesAndAccuracy x) //adjust in part 2 to do k fold validation
 {
-    return (rand() % 100);
+    return (fmod(rand(), 100));
 }
 
 
@@ -49,7 +50,6 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
         //remove the selected feature from the given features
         givenFeatures.erase(bestFeature);
     }
-
     return bestResult; 
 
 }
@@ -64,7 +64,7 @@ void printForwardTrace(vector<FeaturesAndAccuracy>& trace) {
     }
 }
 
-FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, std::vector<FeaturesAndAccuracy> trace)
+FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, std::vector<FeaturesAndAccuracy>& trace)
 {
     FeaturesAndAccuracy currentSet;
     currentSet._features = givenFeatures; 
@@ -84,22 +84,29 @@ FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, st
             BestSet = currentSet;
         }
     }
+    return BestSet;
 }
 FeaturesAndAccuracy BE_Expand( FeaturesAndAccuracy currentSet, std::vector<FeaturesAndAccuracy>& trace)
 {
     FeaturesAndAccuracy ExpandedNode = currentSet;
     FeaturesAndAccuracy BestNodeToExpand;
     BestNodeToExpand._accuracy = -1;
-    for(int i = 0; i < currentSet._features.size(); ++i )
-    {
-        auto it = currentSet._features.begin(); //get iterator at begining
-        std::advance(it, i);  //get item j from begining
-        ExpandedNode._features.erase(it); //remove it from set
+    for(int i = 0; i < currentSet._features.size(); ++i ){
+        set<int>::iterator it = ExpandedNode._features.begin();
+        for(int j = 0; j < i; ++j)
+        {
+            ++it;
+        }
+        ExpandedNode._features.erase(it);
         ExpandedNode._accuracy = GetAccurracy(ExpandedNode); //get accuracy
         trace.push_back(ExpandedNode);  //put it in trace
-        if(BestNodeToExpand._accuracy > ExpandedNode._accuracy)
+        if(BestNodeToExpand._accuracy < ExpandedNode._accuracy)
         {
             BestNodeToExpand = ExpandedNode;
         }
+        ExpandedNode = currentSet;
     }
+    
+
+    return BestNodeToExpand;
 }
