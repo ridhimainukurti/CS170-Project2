@@ -18,5 +18,5 @@ FeaturesAndAccuracy Forward_Selection(const std::set<int>& givenFeatures, std::v
 FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, std::vector<FeaturesAndAccuracy>& trace);
 void printTrace(std::vector<FeaturesAndAccuracy> trace); //print the trace for each of the iterations in the forward selection algorithm
 FeaturesAndAccuracy BE_Expand( FeaturesAndAccuracy currentSet, std::vector<FeaturesAndAccuracy>& trace);
-//FeaturesAndAccuracy FS_Expand( FeaturesAndAccuracy currentSet, std::vector<FeaturesAndAccuracy>& trace, const std::set<int>&);
+FeaturesAndAccuracy FS_Expand( FeaturesAndAccuracy currentSet, std::vector<FeaturesAndAccuracy>& trace, const std::set<int>&);
 #endif

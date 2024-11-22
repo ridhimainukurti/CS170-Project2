@@ -11,7 +11,7 @@ double GetAccurracy(FeaturesAndAccuracy x) //adjust in part 2 to do k fold valid
     return (fmod(rand(), 100));
 }
 
-FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<FeaturesAndAccuracy>& trace) {
+/*FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<FeaturesAndAccuracy>& trace) {
     set<int> selectedFeatures;
     double finalAccuracy = -1.0;
     FeaturesAndAccuracy bestSet; 
@@ -38,7 +38,7 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
                 bestFeature = feature; 
                 currentSet = tempSet; 
             }
-
+            trace.push_back(currentSet);
             selectedFeatures.erase(feature);
 
         }
@@ -46,7 +46,7 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
         //have the accuracy recorded each step
         //like in hypothetical ex: F4 is now selection out of all F1, F2, F3, F4, F5
         selectedFeatures.insert(bestFeature);
-        trace.push_back(currentSet); 
+        //trace.push_back(currentSet); 
 
         //checking if the iteration accuracy is the overall best accuracy
         if (bestAccuracy > finalAccuracy) {
@@ -56,7 +56,7 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
         }
 
         //prints the best feature set for this iteration
-        cout << "Feature set {";
+        /*cout << "Feature set {";
         for (int f : currentSet._features) cout << f << " ";
         cout << "} was best, accuracy is " << bestAccuracy << "%" << endl;
 
@@ -65,8 +65,7 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
     }
     return bestSet; 
 
-}
-
+}*/
 void printTrace(vector<FeaturesAndAccuracy> trace) {
   for (const FeaturesAndAccuracy& entry : trace) {
         cout << "Using feature(s) {";
@@ -124,7 +123,7 @@ FeaturesAndAccuracy BE_Expand( FeaturesAndAccuracy currentSet, std::vector<Featu
     return BestNodeToExpand;
 }
 
-/*
+
 FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<FeaturesAndAccuracy>& trace) {
     FeaturesAndAccuracy currentSet;
     currentSet._features = {}; 
@@ -178,4 +177,3 @@ FeaturesAndAccuracy FS_Expand( FeaturesAndAccuracy currentSet, std::vector<Featu
 
     return BestNodeToExpand;
 }
-*/
