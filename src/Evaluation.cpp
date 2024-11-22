@@ -27,9 +27,9 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
         //checking the accuracy for each feature 
         for (int feature : tempFeatures) {
             FeaturesAndAccuracy tempSet; 
-
             tempSet._features = selectedFeatures; 
             tempSet._features.insert(feature);
+
             double currentAccuracy = GetAccurracy(tempSet);
             selectedFeatures.erase(feature);
             //checks to see if currentAccuracy is the bestAccuracy
@@ -39,8 +39,11 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
                 currentSet = tempSet; 
             }
 
+            selectedFeatures.erase(feature);
+
         }
 
+        //have the accuracy recorded each step
         //like in hypothetical ex: F4 is now selection out of all F1, F2, F3, F4, F5
         selectedFeatures.insert(bestFeature);
         trace.push_back(currentSet); 
@@ -49,8 +52,13 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
         if (bestAccuracy > finalAccuracy) {
             finalAccuracy = bestAccuracy; 
             bestSet = currentSet; 
+            bestSet._accuracy = finalAccuracy;
         }
 
+        //prints the best feature set for this iteration
+        cout << "Feature set {";
+        for (int f : currentSet._features) cout << f << " ";
+        cout << "} was best, accuracy is " << bestAccuracy << "%" << endl;
 
         //remove the selected feature from the given features
         tempFeatures.erase(bestFeature);
@@ -59,13 +67,13 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
 
 }
 
-void printForwardTrace(vector<FeaturesAndAccuracy>& trace) {
-    for (const FeaturesAndAccuracy& entry : trace) {
-        cout << "Using feature(s) {"; 
+void printTrace(vector<FeaturesAndAccuracy> trace) {
+  for (const FeaturesAndAccuracy& entry : trace) {
+        cout << "Using feature(s) {";
         for (int feature : entry._features) {
             cout << feature << " ";
         }
-        cout << "} accuracy is " << entry._accuracy << "%" << endl;
+        cout << "} accuracy is " << entry._accuracy << "%" << endl;  // Print accuracy for each set
     }
 }
 
