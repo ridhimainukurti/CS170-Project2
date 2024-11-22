@@ -30,12 +30,13 @@ TEST(BACK_ELM, ZERO_SET) {
 
 TEST(FWD_SEL, NON_EMPTY_SET) {
     vector<FeaturesAndAccuracy> trace; // Trace to store intermediate results
-    set<int> testSet = {0, 1, 2, 4, 5}; // Input feature set
+    set<int> testSet = {0, 1, 3, 4}; // Input feature set
 
     // Run Forward Selection
     FeaturesAndAccuracy testNode = Forward_Selection(testSet, trace);
 
     // Print all intermediate sets and their accuracies
+    cout << trace.size() << endl;
     for (size_t j = 0; j < trace.size(); ++j) {
         cout << "Set of F: {";
         for (std::set<int>::iterator it = trace.at(j)._features.begin(); it != trace.at(j)._features.end(); ++it) {
