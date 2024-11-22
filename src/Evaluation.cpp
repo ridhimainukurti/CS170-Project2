@@ -13,31 +13,36 @@ double GetAccurracy(FeaturesAndAccuracy x) //adjust in part 2 to do k fold valid
 FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<FeaturesAndAccuracy> trace) {
     set<int> selectedFeatures;
     double finalAccuracy = -1.0;
-    FeaturesAndAccuracy bestSet;  
+    FeaturesAndAccuracy bestSet; 
+    set<int> tempFeatures = givenFeatures; 
 
     //checks if the givenFeatures set is empty
-    while (!givenFeatures.empty()) {
+    while (!tempFeatures.empty()) {
         //variables to keep track of the best accuracy and which feature gives that bestAccuracy
         double bestAccuracy = -1.0;
         int bestFeature = -1;
+        FeaturesAndAccuracy currentSet; 
 
         //checking the accuracy for each feature 
-        for (int feature : givenFeatures) {
-            selectedFeatures.insert(feature);
-            double currentAccuracy = GetAccurracy(tempFeatures);
+        for (int feature : tempFeatures) {
+            FeaturesAndAccuracy tempSet; 
+
+            tempSet._features = selectedFeatures; 
+            tempSet._features.insert(feature);
+            double currentAccuracy = GetAccurracy(tempSet);
             selectedFeatures.erase(feature);
 
             //checks to see if currentAccuracy is the bestAccuracy
             if (currentAccuracy > bestAccuracy) {
                 bestAccuracy = currentAccuracy; 
                 bestFeature = feature; 
+                currentSet = tempSet; 
             }
 
         }
 
         //like in hypothetical ex: F4 is now selection out of all F1, F2, F3, F4, F5
         selectedFeatures.insert(bestFeature);
-        FeaturesAndAccuracy currentSet = {selectedFeatures, bestAccuracy};
         trace.push_back(currentSet); 
 
         //checking if the iteration accuracy is the overall best accuracy
@@ -48,9 +53,9 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
 
 
         //remove the selected feature from the given features
-        givenFeatures.erase(bestFeature);
+        tempFeatures.erase(bestFeature);
     }
-    return bestResult; 
+    return bestSet; 
 
 }
 
