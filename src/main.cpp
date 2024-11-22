@@ -47,7 +47,8 @@ int main() {
             cout << "Beginning search." << endl;
 
             result = Forward_Selection(features, trace);
-            printTrace(trace);
+
+            //printing out the final accuracy and best set
             cout << "Finished search!! The best feature subset is {";
             for (int feature : result._features) {
                 cout << feature << " ";
@@ -78,5 +79,5 @@ int main() {
             break;
     }
 
-    return 0;*/
+    return 0;
 }
