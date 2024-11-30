@@ -19,4 +19,12 @@ FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, st
 void printTrace(std::vector<FeaturesAndAccuracy> trace); //print the trace for each of the iterations in the forward selection algorithm
 FeaturesAndAccuracy BE_Expand( FeaturesAndAccuracy currentSet, std::vector<FeaturesAndAccuracy>& trace);
 FeaturesAndAccuracy FS_Expand( FeaturesAndAccuracy currentSet, std::vector<FeaturesAndAccuracy>& trace, const std::set<int>&);
+
+struct Node
+{
+    std::vector<float> featureValues;
+    float NodeClassification;
+};
+
+
 #endif

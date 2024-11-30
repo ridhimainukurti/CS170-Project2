@@ -1,6 +1,8 @@
 #include "gtest/gtest.h"
 #include "../header/Evaluation.h"
 #include "../src/Evaluation.cpp"
+#include "../header/ReadFileClass.h"
+#include "../src/ReadFileClass.cpp"
 // Simple test case
 
 TEST(BACK_ELM, ZERO_SET) {
@@ -55,8 +57,39 @@ TEST(FWD_SEL, NON_EMPTY_SET) {
     // Since this is a functional test, we can always pass this check as it’s meant for printing and verifying
     EXPECT_TRUE(true);
 }
-
-
+TEST(READTEXTFILL, test1)
+{
+    ReadFile testRead;
+    vector<Node> testContainer;
+    std::string FileName = "../DataFiles/small-test-dataset.txt";
+    testRead.ReadDataFromFile(FileName, testContainer);
+    for(int i = 0; i < testContainer.size(); ++i)
+    {
+        cout << testContainer.at(i).NodeClassification << ", ";
+        for(int j = 0; j < testContainer.at(i).featureValues.size(); ++j)
+        {
+            cout << testContainer.at(i).featureValues.at(j) << ", ";
+        }
+        cout << endl;
+    }
+}
+TEST(READTEXTFILL, test2)
+{
+    ReadFile testRead;
+    vector<Node> testContainer;
+    std::string FileName = "../DataFiles/small-test-dataset.txt";
+    testRead.ReadDataFromFile(FileName, testContainer);
+    testRead.NormalizeData(testContainer);
+    for(int i = 0; i < testContainer.size(); ++i)
+    {
+        cout << testContainer.at(i).NodeClassification << ", ";
+        for(int j = 0; j < testContainer.at(i).featureValues.size(); ++j)
+        {
+            cout << testContainer.at(i).featureValues.at(j) << ", ";
+        }
+        cout << endl;
+    }
+}
 int main(int argc, char **argv) {
     srand(17);
     ::testing::InitGoogleTest(&argc, argv);
