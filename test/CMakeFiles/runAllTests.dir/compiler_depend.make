@@ -322,8 +322,18 @@ CMakeFiles/runAllTests.dir/test.cpp.o: test.cpp \
   /usr/include/c++/8/bits/stl_algo.h \
   /usr/include/c++/8/bits/algorithmfwd.h \
   /usr/include/c++/8/bits/stl_heap.h \
-  /usr/include/c++/8/bits/uniform_int_dist.h
+  /usr/include/c++/8/bits/uniform_int_dist.h \
+  /home/csmajs/jmont229/cs170/CS170-Project2/header/ReadFileClass.h \
+  /home/csmajs/jmont229/cs170/CS170-Project2/header/Evaluation.h \
+  /usr/include/c++/8/fstream \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/basic_file.h \
+  /usr/include/c++/8/x86_64-redhat-linux/bits/c++io.h \
+  /usr/include/c++/8/bits/fstream.tcc \
+  /home/csmajs/jmont229/cs170/CS170-Project2/src/ReadFileClass.cpp \
+  /home/csmajs/jmont229/cs170/CS170-Project2/header/ReadFileClass.h
 
+
+/usr/include/c++/8/bits/fstream.tcc:
 
 /usr/include/c++/8/bits/algorithmfwd.h:
 
@@ -341,11 +351,15 @@ CMakeFiles/runAllTests.dir/test.cpp.o: test.cpp \
 
 /home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp:
 
+/usr/include/c++/8/x86_64-redhat-linux/bits/basic_file.h:
+
 /home/csmajs/jmont229/cs170/CS170-Project2/header/Evaluation.h:
 
 googletest/googletest/include/gtest/gtest_prod.h:
 
 /usr/include/c++/8/bits/unordered_map.h:
+
+/usr/include/c++/8/x86_64-redhat-linux/bits/c++io.h:
 
 /usr/include/c++/8/bits/hashtable_policy.h:
 
@@ -430,6 +444,8 @@ googletest/googletest/include/gtest/internal/gtest-port-arch.h:
 /usr/include/c++/8/bits/locale_facets_nonio.h:
 
 /usr/include/c++/8/ciso646:
+
+/home/csmajs/jmont229/cs170/CS170-Project2/src/ReadFileClass.cpp:
 
 /usr/include/bits/types/struct_statx_timestamp.h:
 
@@ -667,6 +683,8 @@ googletest/googletest/include/gtest/gtest_pred_impl.h:
 
 /usr/include/gnu/stubs-64.h:
 
+/home/csmajs/jmont229/cs170/CS170-Project2/header/ReadFileClass.h:
+
 /usr/include/bits/siginfo-consts.h:
 
 /usr/include/c++/8/ostream:
@@ -896,6 +914,8 @@ googletest/googletest/include/gtest/internal/gtest-filepath.h:
 /usr/include/c++/8/bits/locale_facets.tcc:
 
 /usr/include/c++/8/bits/basic_string.h:
+
+/usr/include/c++/8/fstream:
 
 /usr/include/c++/8/cstdlib:
 
