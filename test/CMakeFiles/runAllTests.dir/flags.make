@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dgtest_disable_pthreads=ON
 
-CXX_INCLUDES = -isystem /home/csmajs/jmont229/cs170/CS170-Project2/test/googletest/googletest/include -isystem /home/csmajs/jmont229/cs170/CS170-Project2/test/googletest/googletest
+CXX_INCLUDES = -isystem /home/csmajs/rinuk001/CS170-Project2/test/googletest/googletest/include -isystem /home/csmajs/rinuk001/CS170-Project2/test/googletest/googletest
 
 CXX_FLAGS = 
 

@@ -304,9 +304,9 @@ CMakeFiles/runAllTests.dir/test.cpp.o: test.cpp \
   googletest/googletest/include/gtest/gtest-typed-test.h \
   googletest/googletest/include/gtest/gtest_pred_impl.h \
   googletest/googletest/include/gtest/gtest_prod.h \
-  /home/csmajs/jmont229/cs170/CS170-Project2/header/Evaluation.h \
-  /home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp \
-  /home/csmajs/jmont229/cs170/CS170-Project2/header/Evaluation.h \
+  /home/csmajs/rinuk001/CS170-Project2/header/Evaluation.h \
+  /home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp \
+  /home/csmajs/rinuk001/CS170-Project2/header/Evaluation.h \
   /usr/include/c++/8/cmath \
   /usr/include/math.h \
   /usr/include/bits/math-vector.h \
@@ -332,9 +332,7 @@ CMakeFiles/runAllTests.dir/test.cpp.o: test.cpp \
 
 /usr/include/math.h:
 
-/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp:
-
-/home/csmajs/jmont229/cs170/CS170-Project2/header/Evaluation.h:
+/home/csmajs/rinuk001/CS170-Project2/header/Evaluation.h:
 
 googletest/googletest/include/gtest/gtest_prod.h:
 
@@ -509,6 +507,8 @@ googletest/googletest/include/gtest/internal/gtest-port.h:
 /usr/include/c++/8/bits/stl_set.h:
 
 /usr/include/c++/8/bits/stl_tempbuf.h:
+
+/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp:
 
 /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h:
 
