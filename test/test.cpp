@@ -77,18 +77,25 @@ TEST(READTEXTFILL, test2)
 {
     ReadFile testRead;
     vector<Node> testContainer;
-    std::string FileName = "../DataFiles/small-test-dataset.txt";
+    std::string FileName = "../DataFiles/large-test-dataset.txt";
     testRead.ReadDataFromFile(FileName, testContainer);
     testRead.NormalizeData(testContainer);
+    std::ofstream writeToCSV("../DataFiles/largeNormalized.csv");
+    if(!writeToCSV.is_open()){throw std::runtime_error("couldnt open file");}
     for(int i = 0; i < testContainer.size(); ++i)
     {
-        cout << testContainer.at(i).NodeClassification << ", ";
+        writeToCSV << testContainer.at(i).NodeClassification << ", ";
         for(int j = 0; j < testContainer.at(i).featureValues.size(); ++j)
         {
-            cout << testContainer.at(i).featureValues.at(j) << ", ";
+            //cout << testContainer.at(i).featureValues.at(j) << ", ";
+            writeToCSV << testContainer.at(i).featureValues.at(j) << ", ";
+
+
         }
-        cout << endl;
+        writeToCSV << endl;
     }
+    writeToCSV.close();
+
 }
 int main(int argc, char **argv) {
     srand(17);
