@@ -11,7 +11,7 @@ double GetAccurracy(FeaturesAndAccuracy x) //adjust in part 2 to do k fold valid
     return (fmod(rand(), 100));
 }
 
-/*FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<FeaturesAndAccuracy>& trace) {
+FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<FeaturesAndAccuracy>& trace) {
     set<int> selectedFeatures;
     double finalAccuracy = -1.0;
     FeaturesAndAccuracy bestSet; 
@@ -56,7 +56,7 @@ double GetAccurracy(FeaturesAndAccuracy x) //adjust in part 2 to do k fold valid
         }
 
         //prints the best feature set for this iteration
-        /*cout << "Feature set {";
+        cout << "Feature set {";
         for (int f : currentSet._features) cout << f << " ";
         cout << "} was best, accuracy is " << bestAccuracy << "%" << endl;
 
@@ -65,7 +65,7 @@ double GetAccurracy(FeaturesAndAccuracy x) //adjust in part 2 to do k fold valid
     }
     return bestSet; 
 
-}*/
+}
 void printTrace(vector<FeaturesAndAccuracy> trace) {
   for (const FeaturesAndAccuracy& entry : trace) {
         cout << "Using feature(s) {";
@@ -124,7 +124,7 @@ FeaturesAndAccuracy BE_Expand( FeaturesAndAccuracy currentSet, std::vector<Featu
 }
 
 
-FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<FeaturesAndAccuracy>& trace) {
+/*FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<FeaturesAndAccuracy>& trace) {
     FeaturesAndAccuracy currentSet;
     currentSet._features = {}; 
     currentSet._accuracy = GetAccurracy(currentSet);
@@ -177,3 +177,4 @@ FeaturesAndAccuracy FS_Expand( FeaturesAndAccuracy currentSet, std::vector<Featu
 
     return BestNodeToExpand;
 }
+*/
