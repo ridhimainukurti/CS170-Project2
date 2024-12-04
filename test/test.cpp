@@ -85,8 +85,10 @@ TEST(READTEXTFILL, test2)
     for(int i = 0; i < testContainer.size(); ++i)
     {
         writeToCSV << testContainer.at(i).NodeClassification << ", ";
+        //cout << testContainer.at(i).featureValues.size();
         for(int j = 0; j < testContainer.at(i).featureValues.size(); ++j)
         {
+            
             //cout << testContainer.at(i).featureValues.at(j) << ", ";
             writeToCSV << testContainer.at(i).featureValues.at(j) << ", ";
 
