@@ -5,6 +5,7 @@
 #include <ctime>   // For seeding random
 #include "../header/Evaluation.h"
 #include "../header/NNClassifier.h"
+#include "../header/ReadFileClass.h"
 
 using namespace std;
 
@@ -15,19 +16,17 @@ void displayMenu() {
 
 
 void testNNClassifier() {
-    cout << "\nTesting Nearest Neighbor Classifier\n";
-    vector<Node> trainingData = {
-        {{1.0, 2.0, 3.0}, 2},  // Node 1: Class 2
-        {{4.0, 5.0, 6.0}, 1},  // Node 2: Class 1
-        {{7.0, 8.0, 9.0}, 1},  // Node 3: Class 1
-        {{1.1, 2.1, 3.1}, 2}   // Node 4: Class 2
-    };
-
-    set<int> featureIndices = {0, 1, 2}; 
-
+    cout << "\nTesting Nearest Neighbor Classifier Small Data\n";
+    vector<Node> trainingData; 
+    string fileName = "../DataFiles/small-test-dataset.txt";
+    ReadFile ReadInData;
+    ReadInData.ReadDataFromFile(fileName, trainingData);
+    ReadInData.NormalizeData(trainingData);
+    set<int> featureIndices = {2, 4, 6}; 
+    Node testNode = trainingData.at(47); 
+    trainingData.erase(trainingData.begin() + 47);
     NNClassifier nn;
     nn.Train(trainingData, featureIndices);
-    Node testNode = {{1.2, 2.2, 3.2}, 2}; 
 
     float predictedClass = nn.Test(testNode);
     cout << "Test Node: ";
@@ -35,7 +34,26 @@ void testNNClassifier() {
         cout << value << " ";
     }
     cout << "\nPredicted Class: " << predictedClass << endl;
-    cout << "\nActual Class" << testNode.NodeClassification << endl;
+    cout << "Actual Class: " << testNode.NodeClassification << endl;
+
+    fileName = "../DataFiles/large-test-dataset.txt";
+    trainingData.clear();
+    ReadInData.ReadDataFromFile(fileName, trainingData);
+    ReadInData.NormalizeData(trainingData);
+    featureIndices.clear();
+    featureIndices = {0, 14, 26}; 
+    testNode = trainingData.at(470); 
+    trainingData.erase(trainingData.begin() + 470);
+
+    nn.Train(trainingData, featureIndices);
+
+    predictedClass = nn.Test(testNode);
+    cout << "Test Node: ";
+    for (float value : testNode.featureValues) {
+        cout << value << " ";
+    }
+    cout << "\nPredicted Class: " << predictedClass << endl;
+    cout << "Actual Class: " << testNode.NodeClassification << endl;
 
     cout << "End of Nearest Neighbor Test\n";
 }
@@ -46,7 +64,7 @@ int main() {
     srand(static_cast<unsigned int>(time(nullptr)));
 
     //TESTING NEAREST NEIGHBOR CLASSIFIER
-    //testNNClassifier();
+    testNNClassifier();
 
 
     // Step 1: User Input
