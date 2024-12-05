@@ -1,4 +1,5 @@
-#include "Validator.h"
+#include "../header/Validator.h"
+#include "../header/NNClassifier.h"
 #include <iostream>
 #include <vector>
 #include <set>
@@ -19,12 +20,12 @@ double Validator::ClassifierEvaluation(std::set<int> featureSubset, std::vector<
         }
 
         // Train the classifier on the training data
-        classifier.train(trainingData, featureSubset);
+        classifier.Train(trainingData, featureSubset);
 
         // Classify the left-out test instance
         Node& testInstance = nodes[testIndex];
-        int predictedLabel = classifier.classify(testInstance, featureSubset);
-        int actualLabel = testInstance.getLabel();
+        int predictedLabel = classifier.Test(testInstance);
+        int actualLabel = testInstance.NodeClassification;
 
         // Check if the classification is correct
         if (predictedLabel == actualLabel) {

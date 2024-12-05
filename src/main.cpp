@@ -6,9 +6,10 @@
 #include "../header/Evaluation.h"
 #include "../header/NNClassifier.h"
 #include "../header/ReadFileClass.h"
+#include "../header/Validator.h"
 
 using namespace std;
-
+double totalTimeSinceLastRead = 0;
 void displayMenu() {
     cout << "Welcome to [Your Name]'s Feature Selection Algorithm." << endl;
     cout << "Please enter total number of features: ";
@@ -27,11 +28,17 @@ void testNNClassifier() {
     NNClassifier nn;
     nn.Train(trainingData, featureIndices);
 
+    std::clock_t start = clock();
     float predictedClass = nn.Test(testNode);
+    std::clock_t end = clock();
+    double duration = double(end - start) / CLOCKS_PER_SEC;
+    cout << "time took to find: " << duration << " seconds"<< endl;
+
     cout << "Test Node: ";
     for (float value : testNode.featureValues) {
         cout << value << " ";
     }
+    cout << "\nfeatures: {2, 4, 6}" << endl; 
     cout << "\nPredicted Class: " << predictedClass << endl;
     cout << "Actual Class: " << testNode.NodeClassification << endl;
 
@@ -46,11 +53,17 @@ void testNNClassifier() {
 
     nn.Train(trainingData, featureIndices);
 
+    cout << "start to find class of NODE" << endl;
+    start = clock();
     predictedClass = nn.Test(testNode);
+    end = clock();
+    duration = double(end - start) / CLOCKS_PER_SEC;
+    cout << "Time took to find: " << duration << " seconds"<< endl;
     cout << "Test Node: ";
     for (float value : testNode.featureValues) {
         cout << value << " ";
     }
+    cout << "\nfeatures: {0, 14, 26}" << endl; 
     cout << "\nPredicted Class: " << predictedClass << endl;
     cout << "Actual Class: " << testNode.NodeClassification << endl;
 
@@ -75,10 +88,18 @@ void testClassifierEvaluation() {
 
     // Define feature subset for small dataset
     set<int> smallFeatureSubset = {2, 4, 6};
-
+    cout << "features: {2, 4, 6}" << endl; 
     // Evaluate accuracy using LOOCV on small dataset
+
+    
+    cout << "Time to find accuracy" << endl;
+    std::clock_t start = clock();
     double smallAccuracy = validator.ClassifierEvaluation(smallFeatureSubset, smallData, nnClassifier);
+    std::clock_t end = clock();
+    double duration = double(end - start) / CLOCKS_PER_SEC;
+    cout << "time took to find: " << duration << " seconds"<< endl;
     cout << "Small Dataset LOOCV Accuracy: " << smallAccuracy * 100 << "%" << endl;
+
 
     // Load and normalize large dataset
     readFile.ReadDataFromFile(largeFileName, largeData);
@@ -86,9 +107,15 @@ void testClassifierEvaluation() {
 
     // Define feature subset for large dataset
     set<int> largeFeatureSubset = {0, 14, 26};
+    cout << "features: {0, 14, 26}" << endl; 
 
     // Evaluate accuracy using LOOCV on large dataset
+    cout << "Time to find accuracy" << endl;
+    start = clock();
     double largeAccuracy = validator.ClassifierEvaluation(largeFeatureSubset, largeData, nnClassifier);
+    end = clock();
+    duration = double(end - start) / CLOCKS_PER_SEC;
+    cout << "time took to find: " << duration << " seconds"<< endl;
     cout << "Large Dataset LOOCV Accuracy: " << largeAccuracy * 100 << "%" << endl;
 
     cout << "End of Validator Test\n";
@@ -101,6 +128,7 @@ int main() {
 
     //TESTING NEAREST NEIGHBOR CLASSIFIER
     testNNClassifier();
+    testClassifierEvaluation();
 
 
     // Step 1: User Input
