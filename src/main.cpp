@@ -12,11 +12,41 @@ void displayMenu() {
     cout << "Please enter total number of features: ";
 }
 
+
+void testNNClassifier() {
+    cout << "\nTesting Nearest Neighbor Classifier\n";
+    vector<Node> trainingData = {
+        {{1.0, 2.0, 3.0}, 0},  // Node 1: Class 0
+        {{4.0, 5.0, 6.0}, 1},  // Node 2: Class 1
+        {{7.0, 8.0, 9.0}, 1},  // Node 3: Class 1
+        {{1.1, 2.1, 3.1}, 0}   // Node 4: Class 0
+    };
+
+    set<int> featureIndices = {0, 1, 2}; 
+
+    NNClassifier nn;
+    nn.Train(trainingData, featureIndices);
+    Node testNode = {{1.2, 2.2, 3.2}, -1}; 
+
+    float predictedClass = nn.Test(testNode);
+    cout << "Test Node: ";
+    for (float value : testNode.featureValues) {
+        cout << value << " ";
+    }
+    cout << "\nPredicted Class: " << predictedClass << endl;
+
+    cout << "End of Nearest Neighbor Test\n";
+}
+
 int main() {
 
     // Seed the random number generator
     srand(static_cast<unsigned int>(time(nullptr)));
 
+    //TESTING NEAREST NEIGHBOR CLASSIFIER
+    testNNClassifier();
+
+    
     // Step 1: User Input
     int totalFeatures;
     displayMenu();
