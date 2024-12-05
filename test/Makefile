@@ -263,6 +263,30 @@ home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.s
 .PHONY : home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.s
 
+home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.o: home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o
+.PHONY : home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.o
+
+# target to build an object file
+home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o
+.PHONY : home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o
+
+home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.i: home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.i
+.PHONY : home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.i
+
+# target to preprocess a source file
+home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.i
+.PHONY : home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.i
+
+home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.s: home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.s
+.PHONY : home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.s
+
+# target to generate assembly for a file
+home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.s
+.PHONY : home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.s
+
 home/csmajs/rinuk001/CS170-Project2/src/main.o: home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o
 .PHONY : home/csmajs/rinuk001/CS170-Project2/src/main.o
 
@@ -332,6 +356,9 @@ help:
 	@echo "... home/csmajs/rinuk001/CS170-Project2/src/Evaluation.o"
 	@echo "... home/csmajs/rinuk001/CS170-Project2/src/Evaluation.i"
 	@echo "... home/csmajs/rinuk001/CS170-Project2/src/Evaluation.s"
+	@echo "... home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.o"
+	@echo "... home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.i"
+	@echo "... home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.s"
 	@echo "... home/csmajs/rinuk001/CS170-Project2/src/main.o"
 	@echo "... home/csmajs/rinuk001/CS170-Project2/src/main.i"
 	@echo "... home/csmajs/rinuk001/CS170-Project2/src/main.s"

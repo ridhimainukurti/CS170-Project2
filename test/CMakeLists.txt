@@ -13,4 +13,5 @@ TARGET_COMPILE_DEFINITIONS(runAllTests PRIVATE gtest_disable_pthreads=ON)
 ADD_EXECUTABLE(features
     ../src/main.cpp
     ../src/Evaluation.cpp
+    ../src/NNClassifier.cpp
 )

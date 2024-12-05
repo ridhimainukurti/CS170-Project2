@@ -119,4 +119,6 @@ CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o: \
  /usr/include/c++/8/ext/aligned_buffer.h \
  /usr/include/c++/8/bits/stl_set.h /usr/include/c++/8/bits/stl_multiset.h \
  /usr/include/c++/8/ctime \
+ /home/csmajs/rinuk001/CS170-Project2/src/../header/Evaluation.h \
+ /home/csmajs/rinuk001/CS170-Project2/src/../header/NNClassifier.h \
  /home/csmajs/rinuk001/CS170-Project2/src/../header/Evaluation.h

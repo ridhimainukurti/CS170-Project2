@@ -127,4 +127,10 @@ CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o
  /usr/include/bits/fp-fast.h \
  /usr/include/bits/mathcalls-helper-functions.h \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
- /usr/include/bits/iscanonical.h
+ /usr/include/bits/iscanonical.h /usr/include/c++/8/algorithm \
+ /usr/include/c++/8/utility /usr/include/c++/8/bits/stl_relops.h \
+ /usr/include/c++/8/bits/stl_algo.h \
+ /usr/include/c++/8/bits/algorithmfwd.h \
+ /usr/include/c++/8/bits/stl_heap.h /usr/include/c++/8/bits/stl_tempbuf.h \
+ /usr/include/c++/8/bits/uniform_int_dist.h /usr/include/c++/8/limits \
+ /usr/include/c++/8/iterator /usr/include/c++/8/bits/stream_iterator.h
