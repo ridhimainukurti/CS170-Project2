@@ -17,17 +17,17 @@ void displayMenu() {
 void testNNClassifier() {
     cout << "\nTesting Nearest Neighbor Classifier\n";
     vector<Node> trainingData = {
-        {{1.0, 2.0, 3.0}, 0},  // Node 1: Class 0
+        {{1.0, 2.0, 3.0}, 2},  // Node 1: Class 2
         {{4.0, 5.0, 6.0}, 1},  // Node 2: Class 1
         {{7.0, 8.0, 9.0}, 1},  // Node 3: Class 1
-        {{1.1, 2.1, 3.1}, 0}   // Node 4: Class 0
+        {{1.1, 2.1, 3.1}, 2}   // Node 4: Class 2
     };
 
     set<int> featureIndices = {0, 1, 2}; 
 
     NNClassifier nn;
     nn.Train(trainingData, featureIndices);
-    Node testNode = {{1.2, 2.2, 3.2}, -1}; 
+    Node testNode = {{1.2, 2.2, 3.2}, 2}; 
 
     float predictedClass = nn.Test(testNode);
     cout << "Test Node: ";
@@ -35,6 +35,7 @@ void testNNClassifier() {
         cout << value << " ";
     }
     cout << "\nPredicted Class: " << predictedClass << endl;
+    cout << "\nActual Class" << testNode.NodeClassification << endl;
 
     cout << "End of Nearest Neighbor Test\n";
 }
@@ -45,7 +46,7 @@ int main() {
     srand(static_cast<unsigned int>(time(nullptr)));
 
     //TESTING NEAREST NEIGHBOR CLASSIFIER
-    testNNClassifier();
+    //testNNClassifier();
 
 
     // Step 1: User Input

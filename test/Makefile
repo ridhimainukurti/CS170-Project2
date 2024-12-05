@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csmajs/rinuk001/CS170-Project2/test
+CMAKE_SOURCE_DIR = /home/csmajs/jmont229/cs170/CS170-Project2/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csmajs/rinuk001/CS170-Project2/test
+CMAKE_BINARY_DIR = /home/csmajs/jmont229/cs170/CS170-Project2/test
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/rinuk001/CS170-Project2/test/CMakeFiles /home/csmajs/rinuk001/CS170-Project2/test//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/jmont229/cs170/CS170-Project2/test/CMakeFiles /home/csmajs/jmont229/cs170/CS170-Project2/test//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/rinuk001/CS170-Project2/test/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/jmont229/cs170/CS170-Project2/test/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -239,77 +239,77 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f googletest/googletest/CMakeFiles/gtest_main.dir/build.make googletest/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-home/csmajs/rinuk001/CS170-Project2/src/Evaluation.o: home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/Evaluation.o
+home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.o: home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.o
 
 # target to build an object file
-home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o
+home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o
 
-home/csmajs/rinuk001/CS170-Project2/src/Evaluation.i: home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.i
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/Evaluation.i
+home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.i: home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.i
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.i
 
 # target to preprocess a source file
-home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.i
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.i
+home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.i
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.i
 
-home/csmajs/rinuk001/CS170-Project2/src/Evaluation.s: home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.s
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/Evaluation.s
+home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.s: home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.s
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.s
 
 # target to generate assembly for a file
-home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.s
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.s
+home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.s
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.s
 
-home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.o: home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.o
+home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.o: home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.o
 
 # target to build an object file
-home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o
+home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o
 
-home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.i: home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.i
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.i
+home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.i: home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.i
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.i
 
 # target to preprocess a source file
-home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.i
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.i
+home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.i
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.i
 
-home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.s: home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.s
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.s
+home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.s: home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.s
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.s
 
 # target to generate assembly for a file
-home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.s
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.s
+home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.s
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.s
 
-home/csmajs/rinuk001/CS170-Project2/src/main.o: home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/main.o
+home/csmajs/jmont229/cs170/CS170-Project2/src/main.o: home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/main.o
 
 # target to build an object file
-home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o
+home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o
 
-home/csmajs/rinuk001/CS170-Project2/src/main.i: home/csmajs/rinuk001/CS170-Project2/src/main.cpp.i
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/main.i
+home/csmajs/jmont229/cs170/CS170-Project2/src/main.i: home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.i
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/main.i
 
 # target to preprocess a source file
-home/csmajs/rinuk001/CS170-Project2/src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.i
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/main.cpp.i
+home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.i
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.i
 
-home/csmajs/rinuk001/CS170-Project2/src/main.s: home/csmajs/rinuk001/CS170-Project2/src/main.cpp.s
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/main.s
+home/csmajs/jmont229/cs170/CS170-Project2/src/main.s: home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.s
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/main.s
 
 # target to generate assembly for a file
-home/csmajs/rinuk001/CS170-Project2/src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.s
-.PHONY : home/csmajs/rinuk001/CS170-Project2/src/main.cpp.s
+home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/features.dir/build.make CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.s
+.PHONY : home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.s
 
 test.o: test.cpp.o
 .PHONY : test.o
@@ -353,15 +353,15 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... runAllTests"
-	@echo "... home/csmajs/rinuk001/CS170-Project2/src/Evaluation.o"
-	@echo "... home/csmajs/rinuk001/CS170-Project2/src/Evaluation.i"
-	@echo "... home/csmajs/rinuk001/CS170-Project2/src/Evaluation.s"
-	@echo "... home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.o"
-	@echo "... home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.i"
-	@echo "... home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.s"
-	@echo "... home/csmajs/rinuk001/CS170-Project2/src/main.o"
-	@echo "... home/csmajs/rinuk001/CS170-Project2/src/main.i"
-	@echo "... home/csmajs/rinuk001/CS170-Project2/src/main.s"
+	@echo "... home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.o"
+	@echo "... home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.i"
+	@echo "... home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.s"
+	@echo "... home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.o"
+	@echo "... home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.i"
+	@echo "... home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.s"
+	@echo "... home/csmajs/jmont229/cs170/CS170-Project2/src/main.o"
+	@echo "... home/csmajs/jmont229/cs170/CS170-Project2/src/main.i"
+	@echo "... home/csmajs/jmont229/cs170/CS170-Project2/src/main.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

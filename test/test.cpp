@@ -3,6 +3,8 @@
 #include "../src/Evaluation.cpp"
 #include "../header/ReadFileClass.h"
 #include "../src/ReadFileClass.cpp"
+#include "../header/NNClassifier.h"
+#include "../src/NNClassifier.cpp"
 // Simple test case
 
 TEST(BACK_ELM, ZERO_SET) {
@@ -81,7 +83,7 @@ TEST(READTEXTFILL, test2)
     testRead.ReadDataFromFile(FileName, testContainer);
     //testRead.NormalizeData(testContainer);
     std::ofstream writeToCSV("../DataFiles/titanic.csv");
-    if(!writeToCSV.is_open()){throw std::runtime_error("couldnt open file");}
+    /*if(!writeToCSV.is_open()){throw std::runtime_error("couldnt open file");}
     for(int i = 0; i < testContainer.size(); ++i)
     {
         writeToCSV << testContainer.at(i).NodeClassification << ", ";
@@ -96,9 +98,23 @@ TEST(READTEXTFILL, test2)
         }
         writeToCSV << endl;
     }
-    writeToCSV.close();
+    writeToCSV.close();*/
 
 }
+TEST(NNCLASSIFIER, test)
+{
+    ReadFile testRead;
+    vector<Node> testContainer;
+    std::string FileName = "../DataFiles/small-test-dataset.txt";
+    testRead.ReadDataFromFile(FileName, testContainer);
+    Node testNode = testContainer.at(testContainer.size()-1);
+    testContainer.pop_back();
+    NNClassifier testClassifierNN;
+    testClassifierNN.Train(testContainer, {2,4,6});
+    EXPECT_FLOAT_EQ(testClassifierNN.Test(testNode), 2);
+
+}
+
 int main(int argc, char **argv) {
     srand(17);
     ::testing::InitGoogleTest(&argc, argv);

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csmajs/rinuk001/CS170-Project2/test
+CMAKE_SOURCE_DIR = /home/csmajs/jmont229/cs170/CS170-Project2/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csmajs/rinuk001/CS170-Project2/test
+CMAKE_BINARY_DIR = /home/csmajs/jmont229/cs170/CS170-Project2/test
 
 # Include any dependencies generated for this target.
 include CMakeFiles/features.dir/depend.make
@@ -69,63 +69,63 @@ include CMakeFiles/features.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/features.dir/flags.make
 
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o: CMakeFiles/features.dir/flags.make
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o: /home/csmajs/rinuk001/CS170-Project2/src/main.cpp
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o: CMakeFiles/features.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/rinuk001/CS170-Project2/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o -MF CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o.d -o CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o -c /home/csmajs/rinuk001/CS170-Project2/src/main.cpp
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o: CMakeFiles/features.dir/flags.make
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o: /home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o: CMakeFiles/features.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/jmont229/cs170/CS170-Project2/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o -MF CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o.d -o CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o -c /home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp
 
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/rinuk001/CS170-Project2/src/main.cpp > CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.i
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp > CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.i
 
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/rinuk001/CS170-Project2/src/main.cpp -o CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.s
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp -o CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.s
 
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o: CMakeFiles/features.dir/flags.make
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o: /home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o: CMakeFiles/features.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/rinuk001/CS170-Project2/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o -MF CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o.d -o CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o -c /home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o: CMakeFiles/features.dir/flags.make
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o: /home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o: CMakeFiles/features.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/jmont229/cs170/CS170-Project2/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o -MF CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o.d -o CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o -c /home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp
 
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp > CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.i
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp > CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.i
 
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp -o CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.s
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp -o CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.s
 
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o: CMakeFiles/features.dir/flags.make
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o: /home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o: CMakeFiles/features.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/rinuk001/CS170-Project2/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o -MF CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o.d -o CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o -c /home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o: CMakeFiles/features.dir/flags.make
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o: /home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o: CMakeFiles/features.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/jmont229/cs170/CS170-Project2/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o -MF CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o.d -o CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o -c /home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp
 
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp > CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.i
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp > CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.i
 
-CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp -o CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.s
+CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp -o CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.s
 
 # Object files for target features
 features_OBJECTS = \
-"CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o" \
-"CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o" \
-"CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o"
+"CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o" \
+"CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o" \
+"CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o"
 
 # External object files for target features
 features_EXTERNAL_OBJECTS =
 
-features: CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o
-features: CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o
-features: CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o
+features: CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o
+features: CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o
+features: CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o
 features: CMakeFiles/features.dir/build.make
 features: CMakeFiles/features.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/csmajs/rinuk001/CS170-Project2/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable features"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/csmajs/jmont229/cs170/CS170-Project2/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable features"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/features.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -137,6 +137,6 @@ CMakeFiles/features.dir/clean:
 .PHONY : CMakeFiles/features.dir/clean
 
 CMakeFiles/features.dir/depend:
-	cd /home/csmajs/rinuk001/CS170-Project2/test && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/csmajs/rinuk001/CS170-Project2/test /home/csmajs/rinuk001/CS170-Project2/test /home/csmajs/rinuk001/CS170-Project2/test /home/csmajs/rinuk001/CS170-Project2/test /home/csmajs/rinuk001/CS170-Project2/test/CMakeFiles/features.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/csmajs/jmont229/cs170/CS170-Project2/test && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/csmajs/jmont229/cs170/CS170-Project2/test /home/csmajs/jmont229/cs170/CS170-Project2/test /home/csmajs/jmont229/cs170/CS170-Project2/test /home/csmajs/jmont229/cs170/CS170-Project2/test /home/csmajs/jmont229/cs170/CS170-Project2/test/CMakeFiles/features.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/features.dir/depend
 

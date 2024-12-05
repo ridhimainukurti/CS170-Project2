@@ -1,5 +1,5 @@
 #ifndef NNClassifier_H_
-#define NNCLassifier_H_
+#define NNClassifier_H_
 #include "Evaluation.h"
 #include <vector>
 #include <set>

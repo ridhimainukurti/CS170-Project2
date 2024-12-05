@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o"
-  "CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/Evaluation.cpp.o.d"
-  "CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o"
-  "CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/NNClassifier.cpp.o.d"
-  "CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o"
-  "CMakeFiles/features.dir/home/csmajs/rinuk001/CS170-Project2/src/main.cpp.o.d"
+  "CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o"
+  "CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/Evaluation.cpp.o.d"
+  "CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o"
+  "CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/NNClassifier.cpp.o.d"
+  "CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o"
+  "CMakeFiles/features.dir/home/csmajs/jmont229/cs170/CS170-Project2/src/main.cpp.o.d"
   "features"
   "features.pdb"
 )
