@@ -4,6 +4,7 @@
 #include <cstdlib> // For rand()
 #include <ctime>   // For seeding random
 #include "../header/Evaluation.h"
+#include "../header/NNClassifier.h"
 
 using namespace std;
 
@@ -46,7 +47,7 @@ int main() {
     //TESTING NEAREST NEIGHBOR CLASSIFIER
     testNNClassifier();
 
-    
+
     // Step 1: User Input
     int totalFeatures;
     displayMenu();

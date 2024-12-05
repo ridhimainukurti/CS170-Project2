@@ -6,8 +6,8 @@ using namespace std;
 
 //store training data and feature indices
 void NNClassifier::Train(const vector<Node>& data, const set<int>& features) {
-    trainingData = data;
-    featureIndices = features;
+    GivenData = data;
+    setOfFeatures = features;
 }
 
 //classify the test node using nearest neighbor
@@ -15,10 +15,10 @@ float NNClassifier::Test(const Node& testNode) const {
     float minDistance = numeric_limits<float>::max();  //starting off with a large distance
     const Node* nearestNode = nullptr;                
 
-    for (const Node& trainNode : trainingData) {
+    for (const Node& trainNode : GivenData) {
         float distance = 0.0;
 
-        for (int featureIndex : featureIndices) {
+        for (int featureIndex : setOfFeatures) {
             float diff = testNode.featureValues[featureIndex] - trainNode.featureValues[featureIndex];
             distance += diff * diff; 
         }
