@@ -5,8 +5,9 @@
 
 class NNClassifier{
     public:
+    virtual ~NNClassifier() = default;
     virtual void Train(const std::vector<Node>&, std::set<int>);
-    virtual void Test(const Node);
+    virtual float Test(const Node);
     private:
     std::vector<Node> GivenData;
     std::set<int> setOfFeatures;
