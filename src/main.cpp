@@ -14,7 +14,6 @@ void displayMenu() {
     cout << "Please enter total number of features: ";
 }
 
-
 void testNNClassifier() {
     cout << "\nTesting Nearest Neighbor Classifier Small Data\n";
     vector<Node> trainingData; 
@@ -56,6 +55,43 @@ void testNNClassifier() {
     cout << "Actual Class: " << testNode.NodeClassification << endl;
 
     cout << "End of Nearest Neighbor Test\n";
+}
+
+// Function to test ClassifierEvaluation
+void testClassifierEvaluation() {
+    cout << "\nTesting Validator with LOOCV on Small and Large Datasets\n";
+
+    string smallFileName = "../DataFiles/small-test-dataset.txt";
+    string largeFileName = "../DataFiles/large-test-dataset.txt";
+
+    vector<Node> smallData, largeData;
+    ReadFile readFile;
+    Validator validator;
+    NNClassifier nnClassifier;
+
+    // Load and normalize small dataset
+    readFile.ReadDataFromFile(smallFileName, smallData);
+    readFile.NormalizeData(smallData);
+
+    // Define feature subset for small dataset
+    set<int> smallFeatureSubset = {2, 4, 6};
+
+    // Evaluate accuracy using LOOCV on small dataset
+    double smallAccuracy = validator.ClassifierEvaluation(smallFeatureSubset, smallData, nnClassifier);
+    cout << "Small Dataset LOOCV Accuracy: " << smallAccuracy * 100 << "%" << endl;
+
+    // Load and normalize large dataset
+    readFile.ReadDataFromFile(largeFileName, largeData);
+    readFile.NormalizeData(largeData);
+
+    // Define feature subset for large dataset
+    set<int> largeFeatureSubset = {0, 14, 26};
+
+    // Evaluate accuracy using LOOCV on large dataset
+    double largeAccuracy = validator.ClassifierEvaluation(largeFeatureSubset, largeData, nnClassifier);
+    cout << "Large Dataset LOOCV Accuracy: " << largeAccuracy * 100 << "%" << endl;
+
+    cout << "End of Validator Test\n";
 }
 
 int main() {
@@ -133,3 +169,5 @@ int main() {
 
     return 0;
 }
+
+
