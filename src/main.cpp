@@ -136,7 +136,7 @@ int main() {
     string FileToSelect;
     ReadFile TextDataRead;
     vector<Node> Data;
-    TextDataRead.ReadDataFromFile(FileNameSmall, Data);
+    
 
     int FileChoice = 0;
     cout<< "1. Small data" << endl;
@@ -145,6 +145,7 @@ int main() {
     cout << "Select File to readFrom: ";
 
     cin >> FileChoice;
+    cout << endl;
     switch(FileChoice)
     {
         case 1:
@@ -157,8 +158,10 @@ int main() {
         FileToSelect = FileNameTitanic;
         break;
         default:
-        FileToSelect = FileNameSmall; 
+         FileToSelect = FileNameSmall;
+
     }
+    TextDataRead.ReadDataFromFile(FileToSelect, Data);
 
     // Step 1: User Input
     int totalFeatures;
@@ -227,4 +230,18 @@ int main() {
     return 0;
 }
 
+/*
+Large FS: {1, 27} 95%
+Large BE: {27} 84%
+Group: Jesus Montes – Jmont229 – Section021 , Ananya Sood – Asood010 – Section021, Ridhima Inukurti - Rinuk001 - Section021
+- DatasetID: 211
+- Small Dataset Results:
+- Forward: Feature Subset: {2,4}, Acc: 0.92
+- Backward: Feature Subset: {1 3 4 6 9} Acc: 0.83
+- Large Dataset Results:
+- Forward: Feature Subset: {1 27}, Acc: 0.95
+- Backward: Feature Subset: {27}, Acc: 0.84
 
+
+
+*/
