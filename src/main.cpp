@@ -198,7 +198,7 @@ int main() {
             //printing out the final accuracy and best set
             cout << "Finished search!! The best feature subset is {";
             for (int feature : result._features) {
-                cout << feature << " ";
+                cout << feature + 1 << " ";
             }
             cout << "}, which has an accuracy of " << result._accuracy << "%" << endl;
             break;
@@ -212,7 +212,7 @@ int main() {
             printTrace(trace); // Reusing forward trace printing for simplicity
             cout << "Finished search!! The best feature subset is {";
             for (int feature : result._features) {
-                cout << feature << " ";
+                cout << feature + 1<< " ";
             }
             cout << "}, which has an accuracy of " << result._accuracy << "%" << endl;
             break;
@@ -237,7 +237,7 @@ Group: Jesus Montes – Jmont229 – Section021 , Ananya Sood – Asood010 – S
 - DatasetID: 211
 - Small Dataset Results:
 - Forward: Feature Subset: {3,5}, Acc: 0.92
-- Backward: Feature Subset: {1 3 4 6 9} Acc: 0.83
+- Backward: Feature Subset: {2 4 5 7 10} Acc: 0.83
 - Large Dataset Results:
 - Forward: Feature Subset: {1 27}, Acc: 0.95
 - Backward: Feature Subset: {27}, Acc: 0.84
