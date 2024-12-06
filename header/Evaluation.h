@@ -18,12 +18,12 @@ struct Node
 };
 
 //adjust functions in part 2 to do k fold validation and to deal with classifiers
-double GetAccurracy(FeaturesAndAccuracy); //adjust in part 2 to do k fold validation
+double GetAccurracy(FeaturesAndAccuracy, std::vector<Node>&); //adjust in part 2 to do k fold validation
 void printForwardTrace(std::vector<FeaturesAndAccuracy>& trace); //print the trace for each of the iterations in the forward selection algorithm
-FeaturesAndAccuracy Forward_Selection(const std::set<int>& givenFeatures, std::vector<FeaturesAndAccuracy>& trace);
-FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, std::vector<FeaturesAndAccuracy>& trace);
+FeaturesAndAccuracy Forward_Selection(const std::set<int>& givenFeatures, std::vector<FeaturesAndAccuracy>& trace, std::vector<Node>&);
+FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, std::vector<FeaturesAndAccuracy>& trace, std::vector<Node>&);
 void printTrace(std::vector<FeaturesAndAccuracy> trace); //print the trace for each of the iterations in the forward selection algorithm
-FeaturesAndAccuracy BE_Expand( FeaturesAndAccuracy currentSet, std::vector<FeaturesAndAccuracy>& trace);
+FeaturesAndAccuracy BE_Expand( FeaturesAndAccuracy currentSet, std::vector<FeaturesAndAccuracy>& trace, std::vector<Node>&);
 //FeaturesAndAccuracy FS_Expand( FeaturesAndAccuracy currentSet, std::vector<FeaturesAndAccuracy>& trace, const std::set<int>&);
 
 

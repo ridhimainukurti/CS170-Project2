@@ -9,7 +9,8 @@
 #include "../header/Validator.h"
 
 using namespace std;
-double totalTimeSinceLastRead = 0;
+
+
 void displayMenu() {
     cout << "Welcome to [Your Name]'s Feature Selection Algorithm." << endl;
     cout << "Please enter total number of features: ";
@@ -127,9 +128,37 @@ int main() {
     srand(static_cast<unsigned int>(time(nullptr)));
 
     //TESTING NEAREST NEIGHBOR CLASSIFIER
-    testNNClassifier();
-    testClassifierEvaluation();
+    //testNNClassifier();
+    //testClassifierEvaluation();
+    string FileNameSmall = "../DataFiles/small-test-dataset.txt";
+    string FileNameLarge = "../DataFiles/large-test-dataset.txt";
+    string FileNameTitanic = "../DataFiles/titanic_clean.txt";
+    string FileToSelect;
+    ReadFile TextDataRead;
+    vector<Node> Data;
+    TextDataRead.ReadDataFromFile(FileNameSmall, Data);
 
+    int FileChoice = 0;
+    cout<< "1. Small data" << endl;
+    cout<< "2. Large data" << endl;
+    cout<< "3. Titanic data" << endl;
+    cout << "Select File to readFrom: ";
+
+    cin >> FileChoice;
+    switch(FileChoice)
+    {
+        case 1:
+        FileToSelect = FileNameSmall;
+        break;
+        case 2:
+        FileToSelect = FileNameLarge;
+        break;
+        case 3:
+        FileToSelect = FileNameTitanic;
+        break;
+        default:
+        FileToSelect = FileNameSmall; 
+    }
 
     // Step 1: User Input
     int totalFeatures;
@@ -146,7 +175,7 @@ int main() {
 
     // Step 2: Initialize necessary variables
     set<int> features;
-    for (int i = 1; i <= totalFeatures; ++i) {
+    for (int i = 0; i < totalFeatures; ++i) {
         features.insert(i);
     }
 
@@ -157,11 +186,11 @@ int main() {
     switch (choice) {
         case 1:
             cout << "Using no features and \"random\" evaluation, I get an accuracy of "
-                 << GetAccurracy({}) << "%" << endl;
+                 << GetAccurracy({}, Data) << "%" << endl;
             cout << "Beginning search." << endl;
 
-            result = Forward_Selection(features, trace);
-            //printTrace(trace);
+            result = Forward_Selection(features, trace, Data);
+            printTrace(trace);
 
             //printing out the final accuracy and best set
             cout << "Finished search!! The best feature subset is {";
@@ -173,10 +202,10 @@ int main() {
 
         case 2:
             cout << "Using all features and \"random\" evaluation, I get an accuracy of "
-                 << GetAccurracy({features, 0}) << "%" << endl;
+                 << GetAccurracy({features, 0}, Data) << "%" << endl;
             cout << "Beginning search." << endl;
 
-            result = Backwards_Elimination(features, trace);
+            result = Backwards_Elimination(features, trace, Data);
             printTrace(trace); // Reusing forward trace printing for simplicity
             cout << "Finished search!! The best feature subset is {";
             for (int feature : result._features) {

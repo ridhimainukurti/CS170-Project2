@@ -4,14 +4,19 @@
 #include <cmath>
 #include <algorithm> 
 #include <iterator>
+#include "../header/NNClassifier.h"
+#include "../header/Validator.h"
 using namespace std;
 
-double GetAccurracy(FeaturesAndAccuracy x) //adjust in part 2 to do k fold validation
+double GetAccurracy(FeaturesAndAccuracy x, vector<Node>& Data) //adjust in part 2 to do k fold validation
 {
-    return (fmod(rand(), 100));
+    NNClassifier NN;
+    //NN.Train(Data, x._features);
+    Validator Val;
+    return Val.ClassifierEvaluation(x._features,Data, NN ) * 100;
 }
 
-FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<FeaturesAndAccuracy>& trace) {
+FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<FeaturesAndAccuracy>& trace, std::vector<Node>& Data) {
     set<int> selectedFeatures;
     double finalAccuracy = -1.0;
     FeaturesAndAccuracy bestSet; 
@@ -26,19 +31,22 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
 
         //checking the accuracy for each feature 
         for (int feature : tempFeatures) {
+            //cout << feature << endl;
             FeaturesAndAccuracy tempSet; 
+            selectedFeatures.insert(feature);
             tempSet._features = selectedFeatures; 
-            tempSet._features.insert(feature);
+            //tempSet._features.insert(feature);
 
-            double currentAccuracy = GetAccurracy(tempSet);
-            selectedFeatures.erase(feature);
+            double currentAccuracy = GetAccurracy(tempSet, Data);
+            tempSet._accuracy = currentAccuracy;
             //checks to see if currentAccuracy is the bestAccuracy
             if (currentAccuracy > bestAccuracy) {
                 bestAccuracy = currentAccuracy; 
                 bestFeature = feature; 
                 currentSet = tempSet; 
             }
-            trace.push_back(currentSet);
+
+            trace.push_back(tempSet);
             selectedFeatures.erase(feature);
 
         }
@@ -56,31 +64,34 @@ FeaturesAndAccuracy Forward_Selection(const set<int>& givenFeatures, vector<Feat
         }
 
         //prints the best feature set for this iteration
-        cout << "Feature set {";
+        /*cout << "Feature set {";
         for (int f : currentSet._features) cout << f << " ";
-        cout << "} was best, accuracy is " << bestAccuracy << "%" << endl;
+        cout << "} was best, accuracy is " << bestAccuracy << "%" << endl;*/
 
         //remove the selected feature from the given features
         tempFeatures.erase(bestFeature);
+        
     }
     return bestSet; 
-
+    
+   return {{}, 0};
 }
 void printTrace(vector<FeaturesAndAccuracy> trace) {
   for (const FeaturesAndAccuracy& entry : trace) {
         cout << "Using feature(s) {";
         for (int feature : entry._features) {
-            cout << feature << " ";
+            cout << feature + 1 << " ";
         }
         cout << "} accuracy is " << entry._accuracy << "%" << endl;  // Print accuracy for each set
     }
 }
 
-FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, std::vector<FeaturesAndAccuracy>& trace)
+FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, std::vector<FeaturesAndAccuracy>& trace, 
+std::vector<Node>& Data)
 {
     FeaturesAndAccuracy currentSet;
     currentSet._features = givenFeatures; 
-    currentSet._accuracy = GetAccurracy(currentSet);
+    currentSet._accuracy = GetAccurracy(currentSet, Data);
     trace.push_back(currentSet);
      
     FeaturesAndAccuracy BestSet;
@@ -89,7 +100,7 @@ FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, st
     //for the the the number of features
     for(int i = 0; i < givenFeatures.size(); ++i)
     {
-        currentSet = BE_Expand(currentSet, trace);
+        currentSet = BE_Expand(currentSet, trace, Data);
         
         if(currentSet._accuracy > BestSet._accuracy)
         {
@@ -98,7 +109,7 @@ FeaturesAndAccuracy Backwards_Elimination(const std::set<int>& givenFeatures, st
     }
     return BestSet;
 }
-FeaturesAndAccuracy BE_Expand( FeaturesAndAccuracy currentSet, std::vector<FeaturesAndAccuracy>& trace)
+FeaturesAndAccuracy BE_Expand( FeaturesAndAccuracy currentSet, std::vector<FeaturesAndAccuracy>& trace, std::vector<Node>& Data)
 {
     FeaturesAndAccuracy ExpandedNode = currentSet;
     FeaturesAndAccuracy BestNodeToExpand;
@@ -110,7 +121,7 @@ FeaturesAndAccuracy BE_Expand( FeaturesAndAccuracy currentSet, std::vector<Featu
             ++it;
         }
         ExpandedNode._features.erase(it);
-        ExpandedNode._accuracy = GetAccurracy(ExpandedNode); //get accuracy
+        ExpandedNode._accuracy = GetAccurracy(ExpandedNode, Data); //get accuracy
         trace.push_back(ExpandedNode);  //put it in trace
         if(BestNodeToExpand._accuracy < ExpandedNode._accuracy)
         {
