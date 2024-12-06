@@ -31,7 +31,7 @@ double Validator::ClassifierEvaluation(std::set<int> featureSubset, std::vector<
         if (predictedLabel == actualLabel) {
             totalCorrect++;
         }
-        cout << testIndex <<  " " << featureSubset.size() <<endl;
+        //cout << testIndex <<  " " << featureSubset.size() <<endl;
     }
 
     // Calculate and return the accuracy

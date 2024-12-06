@@ -236,7 +236,7 @@ Large BE: {27} 84%
 Group: Jesus Montes – Jmont229 – Section021 , Ananya Sood – Asood010 – Section021, Ridhima Inukurti - Rinuk001 - Section021
 - DatasetID: 211
 - Small Dataset Results:
-- Forward: Feature Subset: {2,4}, Acc: 0.92
+- Forward: Feature Subset: {3,5}, Acc: 0.92
 - Backward: Feature Subset: {1 3 4 6 9} Acc: 0.83
 - Large Dataset Results:
 - Forward: Feature Subset: {1 27}, Acc: 0.95
