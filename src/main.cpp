@@ -162,6 +162,7 @@ int main() {
 
     }
     TextDataRead.ReadDataFromFile(FileToSelect, Data);
+    TextDataRead.NormalizeData(Data);
 
     // Step 1: User Input
     int totalFeatures;
