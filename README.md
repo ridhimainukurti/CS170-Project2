@@ -8,10 +8,7 @@ Link to release (part 3): https://github.com/ridhimainukurti/CS170-Project2/rele
 ## Our Findings: Brief Comparison of Forwards Selection and Backwards Elimination:
 The purpose of forwards selection and backwards elimination feature selection techniques is to identify the most relevant features for a predictive model. Essentially forwards selection starts with an empty set of features and then iteratively adds the more significant feature at each step. What forwards selection does is that it evaluates the features that have not been selected (in this case evaluates based on accuracy), and then determines which feature improves the models performance, and then adds that feature to the feature subset, calculating the accuracy of those subsets of features. It will continue this process until adding new features no longer significantly improves the model, or if the desired number of features is selected. On the other hand, backwards selection starts with all of the available features and then iteratively removes the least significant feature. At each step, what backwards selection does is that it sees the accuracy of the model based on removing one of the features, and then will get rid of the feature that contributes the least to the performach of the model. Backwards selection will continue this process until removing additional features harms the performance or when the desired feature subset is reached. Essentially, forwards selection builds up the feature in each step, while backwards selection prunes the feature subset.
   
-## Forwards Selection: Small DataSet (Forward):
-[![Screenshot](./desktop/Screenshot 2025-01-04 at 12.01.54 PM.png)]
- 
-
+## Forwards Selection: Small DataSet (Forward):<img width="628" alt="Screenshot 2025-01-04 at 12 01 54 PM" src="https://github.com/user-attachments/assets/26cf2d14-5788-4dd2-be26-a393fd5c06a6" />
 The forward selection method incrementally evaluates feature subsets and uses the five features that were selected in the beginning. Starting with individual features, it selects the subset that maximizes accuracy. The process reveals that the subset {2,4} achieves the best accuracy.
 Large DataSet (Forward):
 
@@ -25,6 +22,7 @@ Backward Elimination:
 Small DataSet (Backward):
 
 Starting with all features, the backward elimination removes the least significant features iteratively. The final subset {2,4} achieves the best accuracy, consistent with the forward selection results.
+<img width="628" alt="Screenshot 2025-01-04 at 12 01 54 PM" src="https://github.com/user-attachments/assets/a15effad-f174-4ece-9e4d-89f8c58bf674" />
 
 Large DataSet (Backward):
 
