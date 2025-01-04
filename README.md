@@ -31,20 +31,20 @@ Starting with all features, the backward elimination removes the least significa
 * <img width="627" alt="Screenshot 2025-01-04 at 12 07 01 PM" src="https://github.com/user-attachments/assets/f489f969-6c77-40fd-ac30-e0ab1c2bb755" />
 Similar to the forward approach, backward elimination identifies {1} as the optimal subset, demonstrating consistency in results for the large dataset.
 
-Titanic (Backward):
-
+* Titanic (Backward):
+* <img width="609" alt="Screenshot 2025-01-04 at 12 10 18 PM" src="https://github.com/user-attachments/assets/60c84d69-ed38-4ee0-9eea-870c342397de" />
 Backward elimination results align with forward selection, identifying {1} as the optimal subset for accuracy in the Titanic dataset.
 
-**(Additionally videos for Forwards Selection and Backwards Elimination): 
-Forward Selection: Selected all 40 features:
-FS Trace On YouTube
-Backwards Elimination: Selected all 40 features:
-BE Trace On YouTube
+## **(Additionally videos for Forwards Selection and Backwards Elimination): 
+* Forward Selection: Selected all 40 features:
+* [FS Trace On YouTube](https://www.youtube.com/watch?v=wQLiYjekfas&feature=youtu.be)
+* Backwards Elimination: Selected all 40 features:
+* [BE Trace On YouTube](https://www.youtube.com/watch?v=eYS6QPm05_0&ab_channel=GenericOsGenericbrandOcerial)
 
-Comparison of the Images (For Forwards Selection and Backward Elimination for each Dataset):
+## Comparison of the Images (For Forwards Selection and Backward Elimination for each Dataset):
 Across all three datasets, both forward selection and backward elimination yield identical results, demonstrating the reliability of these algorithms. While the methods use opposing strategies, forward selection builds up from no features and backward elimination starts with all features-their convergence on the same optimal subsets validates their ability to get the most significant features. The small datasets benefit from a combination of two features reflecting a more evenly distributed relevance. The large dataset and the titanic dataset are dominated by one key feature emphasizing the limited importance of additional features. 
 
-Contribution of Each Student In the Group:
+## Contribution of Each Student In the Group:
 Part 1: Forward Selection and Test (to ensure functionality) - Ridhima
 	Backwards Elimination and Test (to ensure functionality)  - Jesus 
 	Main Implementation - Ananya 
@@ -55,15 +55,14 @@ Part 3:  Putting it All Together - Jesus
 Report: Everyone :)
 
 
-Challenges:
+## Challenges:
 At the start of this project in part 1, there were some issues in the development of greedy searches, forward selection and backwards elimination. There was some confusion among the group in how forward selection and backwards elimination worked. Forward Selection had some implementation issues on the initial try, but issues were able to be solved. For Part 2 the most challenging portion was just understanding implementation and how it should be designed. Once a plan and design was made, the implementation went relatively smoothly with minor bug fixes in print out statements. We also created test functions within the main with test data in order to check whether our NN-Classifier and validator methods were working efficiently. For part 3, an unseen issue in part 1 Forward Selection arose and took a bit to adjust in order to get a consistent trace but it wasn't a massive issue. In the combination of part 1 and 2, due to the required validator being O(n^2) the large data set took a while to get the best features of. 
 
-Design (objects and methods):  
-
-
+## Design (objects and methods):  
+* <img width="630" alt="Screenshot 2025-01-04 at 12 13 35 PM" src="https://github.com/user-attachments/assets/9dde9dbc-9207-4e09-b304-1804107444c5" />
 Our design follows an object-oriented approach, where the four main classes used are: ReaderFileClass, NNClassifer, Validator, and Evaluation. The ReaderFileClass is responsible for reading data from the specified file, normalizing it and returning a vector of Node objects. This class simplifies the process of data acquisition and ensures that the data is prepared for further processing. The NNClassifer class contains a set of features and a vector of Node objects used for training and testing. The train method initializes the classifier by accepting a set of features while the test method is responsible for determining the class of a given Node based on its features. We use these methods to perform the nearest neighbor classifier. The Validator class evaluates the performance of the nearest neighbor classifier. It includes a validation method which calculates the accuracy of the classifier by testing it on a given dataset and using a specified set of features. The Evaluation class’s main functionality is to manage the feature selection algorithms such as forward selection and backward elimination. The getAccuracy function is responsible for calculating the accuracy of a given feature set by utilizing the NNclassifer and validator methods and classes. The forward selection iteratively selects the best features from a given set of features maximizing the classification accuracy at each step. The backward elimination works in a similar way but in reverse where it starts with all features and then removes the least relevant ones continually evaluating the accuracy after each feature removal. 
  
-Optimizing Code: 
+## Optimizing Code: 
 To optimize our code we made a strategic use of sets. The sets were useful because they automatically ensured that the feature indices are unique and they allowed for fast lookups, insertions and deletions which were all within the time complexity of O(1). This was critical during the training and testing phases where we needed to efficiently select and access subsets of features. Additionally the use of sets for feature subsets ensured that there were no duplicate features that were processes which reduced redundant calculations making the algorithm more efficient
 
 Another important data structure used was a vector which helped extensively store the training data as well as hold the features values for each of the nodes. The structure allowed for fast random access which is essential when iterating through data during the training and evaluation steps. Moreover, vectors are memory efficient in terms of store as they allocate contiguous memory blocks. 
@@ -72,32 +71,32 @@ Also to enhance efficiency we implemented the leave one out cross validation met
 
 By using these techniques, vectors and sets we strike a good balance between fast lookups and memory efficient data stores and ultimately improving the speed and scalability of our classifier. 
 
-Plots for Features:
-Figure 1.1
-
+## Plots for Features:
+* Figure 1.1
+* <img width="447" alt="Screenshot 2025-01-04 at 12 14 27 PM" src="https://github.com/user-attachments/assets/abf9263f-6114-42eb-bd42-3b6be75c710e" />
 Best Feature Deemed by FS Features{1,27} for the large data set with a 95% accuracy (Plot above). The Red plots are of class 1 and the blue plots are of class 2.
 
-Figure 1.2
-
+* Figure 1.2
+* <img width="439" alt="Screenshot 2025-01-04 at 12 14 53 PM" src="https://github.com/user-attachments/assets/016ae111-a914-4516-8512-3a7fab52f8fd" />
 Best Feature Deemed by FS Features{3,5} for the small set, with a 92% accuracy :(Plot Above)The Red plots are of class 1 and the blue plots are of class 2.
-Figure 1.3
 
-
+* Figure 1.3
+* <img width="445" alt="Screenshot 2025-01-04 at 12 15 21 PM" src="https://github.com/user-attachments/assets/89ee94cb-6a71-40ae-9c48-5b9867697164" />
 Not the best set of features {2, 7} for Small data set with a 54% accuracy (Plot Above) The Red plots are of class 1 and the blue plots are of class 2.
 
+* Figure 1.4
+* <img width="447" alt="Screenshot 2025-01-04 at 12 16 00 PM" src="https://github.com/user-attachments/assets/19bb5ec0-ce98-4259-944d-662a1bf7dc90" />
+Not the best set of features {24, 27} for Large data set with a 81.2% accuracy (Plot Above). The Red plots are of class 1 and the blue plots are of class 2.
 
-Figure 1.4
-
-Not the best set of features {24, 27} for Large data set with a 81.2% accuracy (Plot Above)
-The Red plots are of class 1 and the blue plots are of class 2.
-Figure 1.5
-
+* Figure 1.5
+* <img width="609" alt="Screenshot 2025-01-04 at 12 16 32 PM" src="https://github.com/user-attachments/assets/a896f6d4-4c05-44db-85ea-5c218fc8c195" />
 Best set of features {2} for titanic data set with a 78% accuracy (Bar Graph Above) Since there's only one feature (Male and Female) as the best we used a stacked bar chart to differentiate between the ratio who lived or not.  Red means they did survive and black means they didn’t.
-Figure 1.5
 
+* Figure 1.6
+* <img width="543" alt="Screenshot 2025-01-04 at 12 17 07 PM" src="https://github.com/user-attachments/assets/16f849a2-3752-47b1-848c-1fddeb934b43" />
 Non optimal of features {4, 5} for titanic data set with a 42% accuracy (Plot above) Red means they didn't survive and blue means they did, however this graph is slightly skewed because these plots are overlapping, there are smudged labels due to these overlapping plots of different classes.
 
-Analysis of the Plots:
+## Analysis of the Plots:
 For Figure 1.1 we have a plot for the large data set using the features {1, 27}. Our Program deduced via KOOCV that the model has an accuracy of 95%. Plotting these features on a graph as shown above makes the great accuracy evident. Class 1 shown by the red plot are grouped together near the center of the plane, to be a bit more precise for Feature 1, if an unknown class’s feature 1 falls in the domain between approximately (-1, 1) it will fall into class 1, otherwise if its domain falls between approx (-inf, -1,) U (1, inf). Likewise for Feature 27, for an unknown class, if their feature falls in the approximate range of (0, 1) then it is of class 1, otherwise if it's in the range (-inf , 0) U (1, inf) then it will be of class 2. 
 
 For Figure 1.2 we have a plot for the small data set using the features {3, 5}. Our Program deduced via KOOCV that the model has an accuracy of 92%. Plotting these features on a graph as shown above makes it evident of its accuracy. Class 1 shown by the red plot are grouped together near the center of the plane, to be a bit more precise for Feature 3, if an unknown class’s feature 3 falls in the domain between approximately (-1, 1) it will fall into class 1, otherwise if its domain falls between approx (-inf, -1,) U (1, inf). Likewise for Feature 27, for an unknown class, if their feature falls in the approximate range of (0, .75) then it is of class 1, otherwise if it's in the range (-inf , 0) U (.75, inf) then it will be of class 2. 
@@ -110,10 +109,10 @@ For Figure 1.5 we have a plot for the titanic data set using the features {2}. O
 360/453= 0.795 for Male Death to Total and 64/261 =0.245 Female Death to total. So When the NN classifier finds their nearest neighbor based on their gender, if their NN is male they are more likely to be dead and if they are female they are more likely to have survived. 
 For Figure 1.6 we have a plot for the titanic data set using the features {4, 5}. Our Program deduced via KOOCV that the model has an accuracy of 42%. Using the stacked bar chart we can see the why we have a 42% accuracy.It initially looks like we have a distinct pattern based on the color, that under a certain threshold of parent child relationships and siblings spouses relationships we can find a pattern in survival rate, however looking closer at the graph there are smudges for the labels, because some plots have overlappings of survival and non survival cases with the same values for both features. Having an instance of the survival class with the same feature values as an instance of the non survival class effectively makes their euclidean distance the same, so in essence is a random 50-50 to know if they survived based on parch and Sibsp. 
 
-Effect of Normalizing the Data:
+## Effect of Normalizing the Data:
 Normalization is crucial for improving classification accuracy by ensuring that all features are scaled uniformly. Without normalization, features with larger numerical ranges, such as age or fare in the Titanic dataset, can dominate distance calculations in k-NN, skewing results and reducing the classifier’s effectiveness. By rescaling features to a similar range, normalization ensures that each feature contributes equally to the model's decisions. This process is particularly important for algorithms that rely on distance metrics, as it enhances their ability to accurately compare data points and identify patterns across features with varying scales.
 
-Comparison of Different Algorithms:
+## Comparison of Different Algorithms:
 Backward Elimination vs. Forward Selection:
 Runtime: Both will use the same Validator and Classifier themselves so they will be the same in that regard, so they'll take the same run time in that regard. However Forward Selection is faster, and that is due to the implementation of it Backward elimination, using a helper function containing a nested loop, it uses more time to come to a solution than Forward Selection
 Space:
@@ -121,5 +120,5 @@ Again Both use the same validator and Classifier, however once again Forward Sel
 Accuracy: 
 Finally Forward Selection is more accurate, in ML only a few features are really needed to classify unseen instances in supervised learning situations. Adding more features in most cases is overfitting and less accurate in the long run. So with Forward Selection it starts with none and adds the best it can find, and will most likely find the most accurate route. But for BE, it starts with a set of nonoptimal features and slowly removes them and may be set on a poorer set of features based on what greedy deems is best.  
 
-Conclusion:
+## Conclusion:
 Our project demonstrates the effectiveness of both forward selection and backward elimination as feature selection techniques, yielding consistent results across various datasets, including small, large and Titanic data. Both methods, through opposite approaches, identified the same optimal feature subsets, validating their reliability. The use of normalization proved crucial in improving classifier accuracy by ensuring uniform contribution of features. Additionally, the design of our project with classes like ReaderFileClass, NNClassifer, Validator, and Evaluation facilitate modularity and maintainability. While the implementation faced some initial challenges the results highlight the importance of efficient feature selection and data normalization in achieving high accuracy. Overall the project underscores the value of using both forward selection and backward elimination to enhance model performance. 
